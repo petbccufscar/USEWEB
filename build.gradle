@@ -72,10 +72,6 @@ assets {
 }
 
 // Para o Heroku
-task wrapper(type: Wrapper) {
-    gradleVersion = gradleWrapperVersion
-}
-
 task stage() {
     dependsOn clean, war
 }
@@ -86,13 +82,4 @@ tasks.stage.doLast() {
     delete fileTree(dir: "build/libs", exclude: "*.war")
 }
 war.mustRunAfter clean
-
-task copyToLib(type: Copy) {
-    into "$buildDir/server"
-    from(configurations.compile) {
-        include "webapp-runner*"
-    }
-}
-
-stage.dependsOn(copyToLib)
 // Fim Para o Heroku
