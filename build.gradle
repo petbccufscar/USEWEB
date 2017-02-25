@@ -66,7 +66,16 @@ bootRun {
     jvmArgs('-Dspring.output.ansi.enabled=always')
 }
 
+assets {
+    minifyJs = true
+    minifyCss = true
+}
+
 // Para o Heroku
+task wrapper(type: Wrapper) {
+    gradleVersion = gradleWrapperVersion
+}
+
 task stage() {
     dependsOn clean, war
 }
@@ -87,8 +96,3 @@ task copyToLib(type: Copy) {
 
 stage.dependsOn(copyToLib)
 // Fim Para o Heroku
-
-assets {
-    minifyJs = true
-    minifyCss = true
-}
