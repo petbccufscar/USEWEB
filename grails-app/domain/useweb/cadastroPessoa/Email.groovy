@@ -1,4 +1,4 @@
-package useweb.pessoa
+package useweb.cadastroPessoa
 
 class Email {
 
@@ -6,7 +6,12 @@ class Email {
         id name : 'email'
     }
 
+    static belongsTo = [pessoa:Pessoa]
+
+
     static constraints = {
+        //TODO: Completar as contraints
     }
+
     String email
 }

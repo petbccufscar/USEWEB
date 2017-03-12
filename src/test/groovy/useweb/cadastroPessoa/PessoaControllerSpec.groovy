@@ -1,4 +1,4 @@
-package useweb.pessoa
+package useweb.cadastroPessoa
 
 import grails.test.mixin.*
 import spock.lang.*
@@ -54,7 +54,7 @@ class PessoaControllerSpec extends Specification {
             controller.save(pessoa)
 
         then:"A redirect is issued to the show action"
-            response.redirectedUrl == '/pessoa/show/1'
+            response.redirectedUrl == '/cadastroPessoa/show/1'
             controller.flash.message != null
             Pessoa.count() == 1
     }
@@ -98,7 +98,7 @@ class PessoaControllerSpec extends Specification {
             controller.update(null)
 
         then:"A 404 error is returned"
-            response.redirectedUrl == '/pessoa/index'
+            response.redirectedUrl == '/cadastroPessoa/index'
             flash.message != null
 
         when:"An invalid domain instance is passed to the update action"
@@ -119,7 +119,7 @@ class PessoaControllerSpec extends Specification {
 
         then:"A redirect is issued to the show action"
             pessoa != null
-            response.redirectedUrl == "/pessoa/show/$pessoa.id"
+            response.redirectedUrl == "/cadastroPessoa/show/$pessoa.id"
             flash.message != null
     }
 
@@ -130,7 +130,7 @@ class PessoaControllerSpec extends Specification {
             controller.delete(null)
 
         then:"A 404 is returned"
-            response.redirectedUrl == '/pessoa/index'
+            response.redirectedUrl == '/cadastroPessoa/index'
             flash.message != null
 
         when:"A domain instance is created"
@@ -146,7 +146,7 @@ class PessoaControllerSpec extends Specification {
 
         then:"The instance is deleted"
             Pessoa.count() == 0
-            response.redirectedUrl == '/pessoa/index'
+            response.redirectedUrl == '/cadastroPessoa/index'
             flash.message != null
     }
 }

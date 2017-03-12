@@ -1,4 +1,4 @@
-package useweb.pessoa
+package useweb.cadastroPessoa
 
 class EnderecoAuxiliar {
 
@@ -6,7 +6,9 @@ class EnderecoAuxiliar {
         id name : 'cep'
     }
 
+
     static constraints = {
+        //TODO: Verificar as restrições
     }
 
     String cep

@@ -1,4 +1,4 @@
-package useweb.pessoa
+package useweb.cadastroPessoa
 
 class Pessoa {
 
@@ -6,20 +6,23 @@ class Pessoa {
         id name: 'numeroCadastro'
     }
 
-    static hasmany = [emails : Email, telefones: Telefone]
+    static hasMany = [emails : Email, telefones: Telefone]
 
     static constraints = { //Aqui vão regras de validação
-        nome (blank:true, size:1..20)
+        nomeCompleto(blank:false, size:1..20)
         cpf(nullable:false)
         rg(nullable:true)
+        //TODO: Completar e verificar as restrições
     }
 
     String nomeCompleto
     Integer numeroCadastro
     String nomeSocial
-    Date dataDeNascimento
-    Date dataDeCadastro
+    Date dataNascimento
+    Date dataCadastro
     String cpf
     String rg
     String orgaoEmissor
+    Endereco endereco
+    Sexo sexo
 }
