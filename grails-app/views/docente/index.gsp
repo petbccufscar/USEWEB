@@ -1,6 +1,6 @@
 <html>
 <head>
-    <meta name="layout" content="mainStructure"/>
+    <meta name="layout" content="defaultTheme"/>
     <title>Home Professor</title>
     <!-- FullCalendar -->
     <asset:stylesheet src="fullcalendar/dist/fullcalendar.min.css"/>

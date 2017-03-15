@@ -25,5 +25,4 @@ class Usuario extends Pessoa {
     Escolaridade escolaridade
     Etnia etnia
     CorRaca corRaca
-
 }

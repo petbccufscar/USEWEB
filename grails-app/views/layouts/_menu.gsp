@@ -39,11 +39,11 @@
                             </li>
                             <li>
                                 %{--TODO: Trocar para Lista Atividades--}%
-                                <g:link controller="#" action="#"><i
+                                <g:link controller="atividade" action="index"><i
                                         class="fa fa-edit"></i>Lista Atividades</g:link>
                             </li>
                             <li>
-                                <g:link controller="#" action="#"><i
+                                <g:link controller="atendimentoIndividual" action="index"><i
                                         class="fa fa-user"></i>Atendimento Individual</g:link>
                             </li>
                             <li>
@@ -51,7 +51,7 @@
                                     <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li>
-                                        <g:link controller="#"
+                                        <g:link controller="atendimentoGrupo"
                                                 action="#"><i></i>Atendimentos Realizados</g:link>
                                     </li>
                                     <li>
@@ -90,15 +90,15 @@
                                         class="fa fa-home"></i>Home</g:link>
                             </li>
                             <li>
-                                <g:link controller="#" action="#"><i
+                                <g:link controller="atividade" action="index"><i
                                         class="fa fa-edit"></i>Atividades</g:link>
                             </li>
                             <li>
-                                <g:link controller="#" action="#"><i
+                                <g:link controller="atendimentoIndividual" action="index"><i
                                         class="fa fa-user"></i>Atendimento Individual</g:link>
                             </li>
                             <li>
-                                <g:link controller="#" action="#"><i
+                                <g:link controller="atendimentoGrupo" action="#"><i
                                         class="fa fa-users"></i>Atendimento em Grupo</g:link>
                             </li>
                             <li>
@@ -116,8 +116,12 @@
                                         class="fa fa-home"></i>Home</g:link>
                             </li>
                             <li>
-                                <g:link controller="#" action="#"><i
+                                <g:link controller="usuario" action="show"><i
                                         class="fa fa-search"></i>Consultar cadastro</g:link>
+                            </li>
+                            <li>
+                                <g:link controller="usuario" action="create"><i
+                                        class="fa fa-search"></i>Cadastrar Usuário</g:link>
                             </li>
                         </ul>
                     </g:elseif>

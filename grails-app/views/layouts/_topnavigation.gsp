@@ -14,9 +14,9 @@
                         <span class="fa fa-angle-down"></span>
                     </a>
                     <ul class="dropdown-menu dropdown-usermenu pull-right">
-                        <li><g:link controller="template" action="dadosCadastrais">Dados Cadastrais</g:link></li>
+                        <li><g:link controller="systemUser" action="dadosCadastrais">Dados Cadastrais</g:link></li>
                         <li><a href="#">Ajuda</a></li>
-                        <li><g:link controller="template" action="login"><i class="fa fa-sign-out pull-right"></i>Sair</g:link></li>
+                        <li><g:link controller="authentication" action="logout"><i class="fa fa-sign-out pull-right"></i>Sair</g:link></li>
                     </ul>
                 </li>
 

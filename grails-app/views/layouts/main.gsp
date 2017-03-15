@@ -31,27 +31,11 @@
         %{--TODO: Pesquisar como customizar o form de login--}%
         %{--Foi comentado essa parte do codigo para nao dar conflito com a pagina de login--}%
         %{--Tambem é utilizado nas mensagens de erro que antigamente era sobrescrevida com o layout padrão--}%
-        %{--<g:render template="/layouts/menu"/>--}%
-
-        %{--<g:render template="/layouts/topnavigation"/>--}%
 
         <g:layoutBody/>
 
-        %{--<g:render template="/layouts/footer"/>--}%
-
     </div>
 </div>
-
-<!-- jQuery -->
-<asset:javascript src="jquery/dist/jquery.min.js"/>
-<!-- Bootstrap -->
-<asset:javascript src="bootstrap-3.3.7/js/bootstrap.min.js"/>
-<!-- NProgress -->
-<asset:javascript src="nprogress/nprogress.js"/>
-<!-- jQuery custom content scroller -->
-<asset:javascript src="malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"/>
-<!-- Custom Theme Scripts -->
-<asset:javascript src="gentelella/custom.js"/>
 
 <g:pageProperty name="page.javascript"/>
 
