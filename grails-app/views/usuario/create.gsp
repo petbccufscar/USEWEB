@@ -66,8 +66,8 @@
                                                     <div class="col-md-4 col-sm-4 col-xs-4 form-group">
                                                         <div class="checkbox">
                                                             <br/>
-                                                            <label class="control-label" for="data_estimada">
-                                                                <input name="dataEstimada" id="data_estimada" type="checkbox" class="flat"> Data estimada
+                                                            <label class="control-label" for="data_estimada">%{--TODO: trocar data_estimada e dataEstimada --}%
+                                                                <input name="dataEstimada" id="data_estimada" type="checkbox" class="flat"> Data não confirmada
                                                             </label>
                                                         </div>
                                                     </div>
