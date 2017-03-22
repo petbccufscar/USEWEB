@@ -57643,7 +57643,7 @@
             assert.equal(valid.to(invalid), 'Invalid date');
             assert.equal(invalid.toNow(), 'Invalid date');
             assert.ok(isNaN(invalid.get('year')), 'invalid.get is NaN');
-            // TODO invalidAt
+            //  invalidAt
             assert.ok(!invalid.isAfter(valid));
             assert.ok(!valid.isAfter(invalid));
             assert.ok(!invalid.isAfter(invalid));
@@ -63063,7 +63063,7 @@
 
     module('locale', {
         setup : function () {
-            // TODO: Remove once locales are switched to ES6
+            // : Remove once locales are switched to ES6
             each([{
                 name: 'en-gb',
                 data: {}
@@ -63530,7 +63530,7 @@
     });
 
 
-    // TODO: Enable this after fixing pl months parse hack hack
+    //  Enable this after fixing pl months parse hack hack
     // test('monthsParseExact', function (assert) {
     //     var locale = 'test-months-parse-exact';
 

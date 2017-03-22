@@ -6,7 +6,7 @@ import { hooks } from '../utils/hooks';
 import absRound from '../utils/abs-round';
 
 
-// TODO: remove 'name' arg after deprecation is removed
+// remove 'name' arg after deprecation is removed
 function createAdder(direction, name) {
     return function (val, period) {
         var dur, tmp;

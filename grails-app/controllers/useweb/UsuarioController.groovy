@@ -11,6 +11,8 @@ class UsuarioController {
     }
 
     def show() {
+
+//        Teste
         println(params)
 
         render "sucesso"

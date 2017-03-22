@@ -52,10 +52,27 @@
                                                         <input name="nomeSocial" id="nome_social" type="text" class="form-control">
                                                     </div>
 
-                                                    <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                                    %{--TODO: Arrumar representação da data--}%
+                                                    <div class="col-md-4 col-sm-4 col-xs-4 form-group">
                                                         <label class="control-label" for="data_nascimento">Data de Nascimento</label>
                                                         <input name="dataNascimento" id="data_nascimento" type="date" class="form-control">
                                                     </div>
+
+                                                    <div class="col-md-4 col-sm-4 col-xs-4 form-group">
+                                                        <label class="control-label" for="idade">Idade</label>
+                                                        <input name="idade" id="idade" type="text" class="form-control">
+                                                    </div>
+
+                                                    <div class="col-md-4 col-sm-4 col-xs-4 form-group">
+                                                        <div class="checkbox">
+                                                            <br/>
+                                                            <label class="control-label" for="data_estimada">
+                                                                <input name="dataEstimada" id="data_estimada" type="checkbox" class="flat"> Data estimada
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="clearfix"></div>
 
                                                     <div class="col-md-4 col-sm-4 col-xs-4 form-group">
                                                         <label class="control-label" for="sexo">Sexo</label>
@@ -79,27 +96,57 @@
                                                         <input name="orgaoEmissor" id="orgao_emissor" type="text" class="form-control">
                                                     </div>
 
+                                                    <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                                        <label class="control-label" for="nome_mae">Nome da Mãe</label>
+                                                        <input name="nomeMae" id="nome_mae" type="text" class="form-control">
+                                                    </div>
+
+
                                                     <div class="col-md-4 col-sm-12 col-xs-4 form-group">
                                                         <label class="control-label" for="cns">CNS</label>
                                                         <input name="cns" id="cns" type="text" class="form-control">
                                                     </div>
 
-                                                    <div class="col-md-4 col-sm-12 col-xs-4 form-group">
-                                                        <label class="control-label" for="orgao_emissor">Orgão Emissor</label>
-                                                        <input name="orgaoEmissor" id="orgao_emissor" type="text" class="form-control">
+                                                    <div class="col-md-4 col-sm-4 col-xs-4 form-group">
+                                                        <label class="control-label" for="cor_raca">Cor/Raça</label>
+                                                        <input name="corRaca" id="cor_raca" type="text" class="form-control">
+                                                    </div>
+
+                                                    <div class="col-md-4 col-sm-4 col-xs-4 form-group">
+                                                        <label class="control-label" for="etnia">Etnia</label>
+                                                        <input name="etnia" id="etnia" type="text" class="form-control">
+                                                    </div>
+
+                                                    <div class="col-md-4 col-sm-4 col-xs-4 form-group">
+                                                        <label class="control-label" for="escolaridade">Escolaridade</label>
+                                                        <input name="escolaridade" id="escolaridade" type="text" class="form-control">
+                                                    </div>
+
+                                                    <div class="col-md-4 col-sm-4 col-xs-4 form-group">
+                                                        <label class="control-label" for="profissao">Profissão</label>
+                                                        <input name="profissao" id="profissao" type="text" class="form-control">
+                                                    </div>
+
+                                                    <div class="col-md-4 col-sm-4 col-xs-4 form-group">
+                                                        <label class="control-label" for="status_profissao">Status Profissão</label>
+                                                        <input name="statusProfissao" id="status_profissao" type="text" class="form-control">
                                                     </div>
 
                                                     <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                                                        <label lass="control-label" for="email">Email <small>(required)</small></label>
-                                                        <input name="email" id="email" type="email" class="form-control"
-                                                               placeholder="andrew@creative-tim.com">
+                                                        <label class="control-label" for="observacao">Observações de Cadastro</label>
+                                                        <textarea rows="5" name="observacao" id="observacao"  class="form-control"></textarea>
                                                     </div>
+
+                                                    %{--<div class="col-md-12 col-sm-12 col-xs-12 form-group">--}%
+                                                        %{--<label class="control-label" for="email">Email <small>(required)</small></label>--}%
+                                                        %{--<input name="email" id="email" type="email" class="form-control"--}%
+                                                               %{--placeholder="andrew@creative-tim.com">--}%
+                                                    %{--</div>--}%
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="tab-pane" id="endereco">
-                                            <h4 class="info-text">What are you doing? (checkboxes)</h4>
 
                                             <div class="row">
 
@@ -215,7 +262,7 @@
                                                    name='next' value="${message(code:'default.button.next.label', default:'Próximo')}"/>
                                             <g:actionSubmit type='button' action="show"
                                                    class='btn btn-finish btn-fill btn-success btn-wd btn-sm'
-                                                   name='finish' value="${message(code:'default.button.save.label', default:'Salvar')}"/>
+                                                   name='finish' value="${message(code:'default.button.savarCadastro.label', default:'Salvar')}"/>
                                         </div>
 
                                         <div class="pull-left">

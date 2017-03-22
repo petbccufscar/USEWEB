@@ -7,6 +7,7 @@ import useweb.authentication.SystemUserController
 @Secured('IS_AUTHENTICATED_FULLY')
 class DocenteController {
     def index() {
+
         return [name: SystemUserController.currentUser.username, roles: SystemUserController.currentUser.authorities]
     }
 }

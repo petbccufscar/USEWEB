@@ -7,6 +7,7 @@ import useweb.authentication.SystemUserController
 class TerceirizadoController {
 
     def index() {
+
         return [name: SystemUserController.currentUser.username, roles: SystemUserController.currentUser.authorities]
     }
 }

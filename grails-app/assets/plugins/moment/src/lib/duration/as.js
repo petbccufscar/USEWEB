@@ -29,7 +29,7 @@ export function as (units) {
     }
 }
 
-// TODO: Use this.as('ms')?
+// Use this.as('ms')?
 export function valueOf () {
     return (
         this._milliseconds +

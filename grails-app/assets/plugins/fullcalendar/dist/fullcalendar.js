@@ -630,7 +630,7 @@ function flexibleCompare(a, b) {
 
 // Computes the intersection of the two ranges. Returns undefined if no intersection.
 // Expects all dates to be normalized to the same timezone beforehand.
-// TODO: move to date section?
+//  move to date section?
 function intersectRanges(subjectRange, constraintRange) {
 	var subjectStart = subjectRange.start;
 	var subjectEnd = subjectRange.end;
@@ -1268,7 +1268,7 @@ newMomentProto.stripTime = function() {
 		// get the values before any conversion happens
 		a = this.toArray(); // array of y/m/d/h/m/s/ms
 
-		// TODO: use keepLocalTime in the future
+		//  use keepLocalTime in the future
 		this.utc(); // set the internal UTC flag (will clear the ambig flags)
 		setUTCValues(this, a.slice(0, 3)); // set the year/month/date. time will be zero
 
@@ -1293,7 +1293,7 @@ newMomentProto.hasTime = function() {
 // Converts the moment to UTC, stripping out its timezone offset, but preserving its
 // YMD and time-of-day. A moment with a stripped timezone offset will display no
 // timezone offset when .format() is called.
-// TODO: look into Moment's keepLocalTime functionality
+//  look into Moment's keepLocalTime functionality
 newMomentProto.stripZone = function() {
 	var a, wasAmbigTime;
 
@@ -1338,7 +1338,7 @@ newMomentProto.local = function() {
 	if (wasAmbigZone) {
 		// If the moment was ambiguously zoned, the date fields were stored as UTC.
 		// We want to preserve these, but in local time.
-		// TODO: look into Moment's keepLocalTime functionality
+		//  look into Moment's keepLocalTime functionality
 		setLocalValues(this, a);
 	}
 
@@ -1502,7 +1502,7 @@ function commonlyAmbiguate(inputs, preserveTime) {
 }
 
 // Transfers all the flags related to ambiguous time/zone from the `src` moment to the `dest` moment
-// TODO: look into moment.momentProperties for this.
+//  look into moment.momentProperties for this.
 function transferAmbigs(src, dest) {
 	if (src._ambigTime) {
 		dest._ambigTime = true;
@@ -1627,7 +1627,7 @@ function formatDateWithChunk(date, chunk) {
 
 // Date Range Formatting
 // -------------------------------------------------------------------------------------------------
-// TODO: make it work with timezone offset
+//  make it work with timezone offset
 
 // Using a formatting string meant for a single date, generate a range string, like
 // "Sep 2 - 9 2013", that intelligently inserts a separator where the dates differ.
@@ -1726,7 +1726,7 @@ var similarUnitMap = {
 	m: 'second', // minute
 	s: 'second' // second
 };
-// TODO: week maybe?
+//  week maybe?
 
 
 // Given a formatting chunk, and given that both dates are similar in the regard the
@@ -1772,7 +1772,7 @@ function getFormatStringChunks(formatStr) {
 // Break the formatting string into an array of chunks
 function chunkFormatString(formatStr) {
 	var chunks = [];
-	var chunker = /\[([^\]]*)\]|\(([^\)]*)\)|(LTS|LT|(\w)\4*o?)|([^\w\[\(]+)/g; // TODO: more descrimination
+	var chunker = /\[([^\]]*)\]|\(([^\)]*)\)|(LTS|LT|(\w)\4*o?)|([^\w\[\(]+)/g; //  more descrimination
 	var match;
 
 	while ((match = chunker.exec(formatStr))) {
@@ -1854,7 +1854,7 @@ function extendClass(superClass, members) {
 
 
 function mixIntoClass(theClass, members) {
-	copyOwnProps(members, theClass.prototype); // TODO: copyNativeMethods?
+	copyOwnProps(members, theClass.prototype); //  copyNativeMethods?
 }
 ;;
 
@@ -2169,7 +2169,7 @@ var Popover = Class.extend(ListenerMixin, {
 
 	// Triggers a callback. Calls a function in the option hash of the same name.
 	// Arguments beyond the first `name` are forwarded on.
-	// TODO: better code reuse for this. Repeat code
+	//  better code reuse for this. Repeat code
 	trigger: function(name) {
 		if (this.options[name]) {
 			this.options[name].apply(this, Array.prototype.slice.call(arguments, 1));
@@ -2418,7 +2418,7 @@ var CoordCache = FC.CoordCache = Class.extend({
 
 /* Tracks a drag's mouse movement, firing various handlers
 ----------------------------------------------------------------------------------------------------------------------*/
-// TODO: use Emitter
+//  use Emitter
 
 var DragListener = FC.DragListener = Class.extend(ListenerMixin, MouseIgnorerMixin, {
 
@@ -2433,7 +2433,7 @@ var DragListener = FC.DragListener = Class.extend(ListenerMixin, MouseIgnorerMix
 	originY: null,
 
 	// the wrapping element that scrolls, or MIGHT scroll if there's overflow.
-	// TODO: do this for wrappers that have overflow:hidden as well.
+	//  do this for wrappers that have overflow:hidden as well.
 	scrollEl: null,
 
 	isInteracting: false,
@@ -2770,7 +2770,7 @@ var DragListener = FC.DragListener = Class.extend(ListenerMixin, MouseIgnorerMix
 		if (this.options[name]) {
 			this.options[name].apply(this, Array.prototype.slice.call(arguments, 1));
 		}
-		// makes _methods callable by event name. TODO: kill this
+		// makes _methods callable by event name.  kill this
 		if (this['_' + name]) {
 			this['_' + name].apply(this, Array.prototype.slice.call(arguments, 1));
 		}
@@ -2828,7 +2828,7 @@ DragListener.mixin({
 	computeScrollBounds: function() {
 		if (this.isAutoScroll) {
 			this.scrollBounds = getOuterRect(this.scrollEl);
-			// TODO: use getClientRect in future. but prevents auto scrolling when on top of scrollbars
+			//  use getClientRect in future. but prevents auto scrolling when on top of scrollbars
 		}
 	},
 
@@ -3017,7 +3017,7 @@ var HitDragListener = DragListener.extend({
 			if (subjectEl && this.options.subjectCenter) {
 
 				// only consider the area the subject overlaps the hit. best for large subjects.
-				// TODO: skip this if hit didn't supply left/right/top/bottom
+				//  skip this if hit didn't supply left/right/top/bottom
 				if (this.origHit) {
 					subjectRect = intersectRects(this.origHit, subjectRect) ||
 						subjectRect; // in case there is no intersection
@@ -3396,11 +3396,11 @@ var Grid = FC.Grid = Class.extend(ListenerMixin, MouseIgnorerMixin, {
 	displayEventTime: null,
 	displayEventEnd: null,
 
-	minResizeDuration: null, // TODO: hack. set by subclasses. minumum event resize duration
+	minResizeDuration: null, //  hack. set by subclasses. minumum event resize duration
 
 	// if defined, holds the unit identified (ex: "year" or "month") that determines the level of granularity
 	// of the date areas. if not defined, assumes to be day and time granularity.
-	// TODO: port isTimeScale into same system?
+	//  port isTimeScale into same system?
 	largeUnit: null,
 
 	dayDragListener: null,
@@ -3496,7 +3496,7 @@ var Grid = FC.Grid = Class.extend(ListenerMixin, MouseIgnorerMixin, {
 
 
 	// Diffs the two dates, returning a duration, based on granularity of the grid
-	// TODO: port isTimeScale into this system?
+	//  port isTimeScale into this system?
 	diffDates: function(a, b) {
 		if (this.largeUnit) {
 			return diffByUnit(a, b, this.largeUnit);
@@ -3523,7 +3523,7 @@ var Grid = FC.Grid = Class.extend(ListenerMixin, MouseIgnorerMixin, {
 
 	// Given coordinates from the topleft of the document, return data about the date-related area underneath.
 	// Can return an object with arbitrary properties (although top/right/left/bottom are encouraged).
-	// Must have a `grid` property, a reference to this current grid. TODO: avoid this
+	// Must have a `grid` property, a reference to this current grid.  avoid this
 	// The returned object will be processed by getHitSpan and getHitEl.
 	queryHit: function(leftOffset, topOffset) {
 	},
@@ -3746,7 +3746,7 @@ var Grid = FC.Grid = Class.extend(ListenerMixin, MouseIgnorerMixin, {
 
 	/* Event Helper
 	------------------------------------------------------------------------------------------------------------------*/
-	// TODO: should probably move this to Grid.events, like we did event dragging / resizing
+	//  should probably move this to Grid.events, like we did event dragging / resizing
 
 
 	// Renders a mock event at the given event location, which contains zoned start/end properties.
@@ -3827,7 +3827,7 @@ var Grid = FC.Grid = Class.extend(ListenerMixin, MouseIgnorerMixin, {
 
 
 	// Given two spans, must return the combination of the two.
-	// TODO: do this separation of concerns (combining VS validation) for event dnd/resize too.
+	//  do this separation of concerns (combining VS validation) for event dnd/resize too.
 	computeSelectionSpan: function(span0, span1) {
 		var dates = [ span0.start, span0.end, span1.start, span1.end ];
 
@@ -3889,13 +3889,13 @@ var Grid = FC.Grid = Class.extend(ListenerMixin, MouseIgnorerMixin, {
 
 	/* Fill System (highlight, background events, business hours)
 	--------------------------------------------------------------------------------------------------------------------
-	TODO: remove this system. like we did in TimeGrid
+	 remove this system. like we did in TimeGrid
 	*/
 
 
 	// Renders a set of rectangles over the given segments of time.
 	// MUST RETURN a subset of segs, the segs that were actually rendered.
-	// Responsible for populating this.elsByFill. TODO: better API for expressing this requirement
+	// Responsible for populating this.elsByFill.  better API for expressing this requirement
 	renderFill: function(type, segs) {
 		// subclasses must implement
 	},
@@ -4024,7 +4024,7 @@ Grid.mixin({
 	isDraggingSeg: false, // is a segment being dragged? boolean
 	isResizingSeg: false, // is a segment being resized? boolean
 	isDraggingExternal: false, // jqui-dragging an external element? boolean
-	segs: null, // the *event* segments currently rendered in the grid. TODO: rename to `eventSegs`
+	segs: null, // the *event* segments currently rendered in the grid.  rename to `eventSegs`
 
 
 	// Renders the given events onto the grid
@@ -4694,7 +4694,7 @@ Grid.mixin({
 						disableCursor();
 						resizeLocation = null;
 					}
-					// no change? (TODO: how does this work with timezones?)
+					// no change? ( how does this work with timezones?)
 					else if (resizeLocation.start.isSame(event.start) && resizeLocation.end.isSame(eventEnd)) {
 						resizeLocation = null;
 					}
@@ -4782,7 +4782,7 @@ Grid.mixin({
 		if (!resizeLocation.start.isBefore(resizeLocation.end)) {
 
 			defaultDuration =
-				this.minResizeDuration || // TODO: hack
+				this.minResizeDuration || //  hack
 				(event.allDay ?
 					calendar.defaultAllDayEventDuration :
 					calendar.defaultTimedEventDuration);
@@ -5022,7 +5022,7 @@ Grid.mixin({
 		for (i = 0; i < segs.length; i++) {
 			seg = segs[i];
 			seg.event = event;
-			seg.eventStartMS = +span.start; // TODO: not the best name after making spans unzoned
+			seg.eventStartMS = +span.start; //  not the best name after making spans unzoned
 			seg.eventDurationMS = span.end - span.start;
 		}
 
@@ -5380,7 +5380,7 @@ var DayTableMixin = FC.DayTableMixin = {
 
 
 	// Slices up a date range into a segment for every day-cell it intersects with.
-	// TODO: make more DRY with sliceRangeByRow somehow.
+	//  make more DRY with sliceRangeByRow somehow.
 	sliceRangeByDay: function(range) {
 		var daysPerRow = this.daysPerRow;
 		var normalRange = this.view.computeDayRange(range); // make whole-day range, considering nextDayThreshold
@@ -5472,7 +5472,7 @@ var DayTableMixin = FC.DayTableMixin = {
 	},
 
 
-	// TODO: when internalApiVersion, accept an object for HTML attributes
+	//  when internalApiVersion, accept an object for HTML attributes
 	// (colspan should be no different)
 	renderHeadDateCellHtml: function(date, colspan, otherAttrs) {
 		var view = this.view;
@@ -5550,7 +5550,7 @@ var DayTableMixin = FC.DayTableMixin = {
 	},
 
 
-	// TODO: a generic method for dealing with <tr>, RTL, intro
+	//  a generic method for dealing with <tr>, RTL, intro
 	// when increment internalApiVersion
 	// wrapTr (scheduler)
 
@@ -5583,7 +5583,7 @@ var DayTableMixin = FC.DayTableMixin = {
 
 var DayGrid = FC.DayGrid = Grid.extend(DayTableMixin, {
 
-	numbersVisible: false, // should render a row for day/week numbers? set by outside view. TODO: make internal
+	numbersVisible: false, // should render a row for day/week numbers? set by outside view.  make internal
 	bottomCoordPadding: 0, // hack for extending the hit area for the last row of the coordinate grid
 
 	rowEls: null, // set of fake row elements
@@ -5839,7 +5839,7 @@ var DayGrid = FC.DayGrid = Grid.extend(DayTableMixin, {
 
 	/* Event Drag Visualization
 	------------------------------------------------------------------------------------------------------------------*/
-	// TODO: move to DayGrid.event, similar to what we did with Grid's drag methods
+	//  move to DayGrid.event, similar to what we did with Grid's drag methods
 
 
 	// Renders a visual indication of an event or external element being dragged.
@@ -6366,7 +6366,7 @@ DayGrid.mixin({
 	// `row` is the row number.
 	computeRowLevelLimit: function(row) {
 		var rowEl = this.rowEls.eq(row); // the containing "fake" row div
-		var rowHeight = rowEl.height(); // TODO: cache somehow?
+		var rowHeight = rowEl.height(); //  cache somehow?
 		var trEls = this.rowStructs[row].tbodyEl.children();
 		var i, trEl;
 		var trHeight;
@@ -6814,7 +6814,7 @@ var TimeGrid = FC.TimeGrid = Grid.extend(DayTableMixin, {
 
 		this.slotDuration = slotDuration;
 		this.snapDuration = snapDuration;
-		this.snapsPerSlot = slotDuration / snapDuration; // TODO: ensure an integer multiple?
+		this.snapsPerSlot = slotDuration / snapDuration; //  ensure an integer multiple?
 
 		this.minResizeDuration = snapDuration; // hack
 
@@ -6974,7 +6974,7 @@ var TimeGrid = FC.TimeGrid = Grid.extend(DayTableMixin, {
 		var dayRange;
 
 		for (dayIndex = 0; dayIndex < this.daysPerRow; dayIndex++) {
-			dayDate = this.dayDates[dayIndex].clone(); // TODO: better API for this?
+			dayDate = this.dayDates[dayIndex].clone(); //  better API for this?
 			dayRange = {
 				start: dayDate.clone().time(this.minTime),
 				end: dayDate.clone().time(this.maxTime)
@@ -7267,7 +7267,7 @@ TimeGrid.mixin({
 		this.highlightContainerEls = skeletonEl.find('.fc-highlight-container');
 		this.businessContainerEls = skeletonEl.find('.fc-business-container');
 
-		this.bookendCells(skeletonEl.find('tr')); // TODO: do this on string level
+		this.bookendCells(skeletonEl.find('tr')); //  do this on string level
 		this.el.append(skeletonEl);
 	},
 
@@ -7330,7 +7330,7 @@ TimeGrid.mixin({
 
 
 	renderBgSegs: function(segs) {
-		segs = this.renderFillSegEls('bgEvent', segs); // TODO: old fill system
+		segs = this.renderFillSegEls('bgEvent', segs); //  old fill system
 		this.updateSegVerticals(segs);
 		this.attachSegsByCol(this.groupSegsByCol(segs), this.bgContainerEls);
 		this.bgSegs = segs;
@@ -7348,7 +7348,7 @@ TimeGrid.mixin({
 
 
 	renderHighlightSegs: function(segs) {
-		segs = this.renderFillSegEls('highlight', segs); // TODO: old fill system
+		segs = this.renderFillSegEls('highlight', segs); //  old fill system
 		this.updateSegVerticals(segs);
 		this.attachSegsByCol(this.groupSegsByCol(segs), this.highlightContainerEls);
 		this.highlightSegs = segs;
@@ -7365,7 +7365,7 @@ TimeGrid.mixin({
 
 
 	renderBusinessSegs: function(segs) {
-		segs = this.renderFillSegEls('businessHours', segs); // TODO: old fill system
+		segs = this.renderFillSegEls('businessHours', segs); //  old fill system
 		this.updateSegVerticals(segs);
 		this.attachSegsByCol(this.groupSegsByCol(segs), this.businessContainerEls);
 		this.businessSegs = segs;
@@ -7513,7 +7513,7 @@ TimeGrid.mixin({
 						) +
 				'</div>' +
 				'<div class="fc-bg"/>' +
-				/* TODO: write CSS for this
+				/* write CSS for this
 				(isResizableFromStart ?
 					'<div class="fc-resizer fc-start-resizer" />' :
 					''
@@ -7913,7 +7913,7 @@ var View = FC.View = Class.extend(EmitterMixin, ListenerMixin, {
 			calendar,
 			[name, thisObj || this].concat(
 				Array.prototype.slice.call(arguments, 2), // arguments beyond thisObj
-				[ this ] // always make the last argument a reference to the view. TODO: deprecate
+				[ this ] // always make the last argument a reference to the view.  deprecate
 			)
 		);
 	},
@@ -8152,7 +8152,7 @@ var View = FC.View = Class.extend(EmitterMixin, ListenerMixin, {
 			this.setDate(date);
 		}
 		if (this.render) {
-			this.render(); // TODO: deprecate
+			this.render(); //  deprecate
 		}
 		this.renderDates();
 		this.updateSize();
@@ -8170,7 +8170,7 @@ var View = FC.View = Class.extend(EmitterMixin, ListenerMixin, {
 		this.unrenderBusinessHours();
 		this.unrenderDates();
 		if (this.destroy) {
-			this.destroy(); // TODO: deprecate
+			this.destroy(); //  deprecate
 		}
 	},
 
@@ -8257,7 +8257,7 @@ var View = FC.View = Class.extend(EmitterMixin, ListenerMixin, {
 
 	// Immediately render the current time indicator and begins re-rendering it at an interval,
 	// which is defined by this.getNowIndicatorUnit().
-	// TODO: somehow do this for the current whole day's background too
+	//  somehow do this for the current whole day's background too
 	startNowIndicator: function() {
 		var _this = this;
 		var unit;
@@ -8441,12 +8441,12 @@ var View = FC.View = Class.extend(EmitterMixin, ListenerMixin, {
 
 		if (this.isEventsRendered) {
 
-			// TODO: optimize: if we know this is part of a displayEvents call, don't queryScroll/setScroll
+			//  optimize: if we know this is part of a displayEvents call, don't queryScroll/setScroll
 			scrollState = this.queryScroll();
 
 			this.triggerEventUnrender();
 			if (this.destroyEvents) {
-				this.destroyEvents(); // TODO: deprecate
+				this.destroyEvents(); //  deprecate
 			}
 			this.unrenderEvents();
 			this.setScroll(scrollState);
@@ -8592,7 +8592,7 @@ var View = FC.View = Class.extend(EmitterMixin, ListenerMixin, {
 		var eventInput;
 		var event;
 
-		// Try to build an event object and render it. TODO: decouple the two
+		// Try to build an event object and render it.  decouple the two
 		if (eventProps) {
 			eventInput = $.extend({}, eventProps, dropLocation);
 			event = this.calendar.renderEvent(eventInput, meta.stick)[0]; // renderEvent returns an array
@@ -8727,7 +8727,7 @@ var View = FC.View = Class.extend(EmitterMixin, ListenerMixin, {
 		if (this.isSelected) {
 			this.isSelected = false;
 			if (this.destroySelection) {
-				this.destroySelection(); // TODO: deprecate
+				this.destroySelection(); //  deprecate
 			}
 			this.unrenderSelection();
 			this.trigger('unselect', null, ev);
@@ -8775,8 +8775,8 @@ var View = FC.View = Class.extend(EmitterMixin, ListenerMixin, {
 
 	/* Mouse / Touch Unselecting (time range & event unselection)
 	------------------------------------------------------------------------------------------------------------------*/
-	// TODO: move consistently to down/start or up/end?
-	// TODO: don't kill previous selection if touch scrolling
+	//  move consistently to down/start or up/end?
+	//  don't kill previous selection if touch scrolling
 
 
 	handleDocumentMousedown: function(ev) {
@@ -9163,7 +9163,7 @@ var Calendar = FC.Calendar = Class.extend({
 			overrides = viewOverrides[viewType];
 			viewType = null; // clear. might repopulate for another iteration
 
-			if (typeof spec === 'function') { // TODO: deprecate
+			if (typeof spec === 'function') { //  deprecate
 				spec = { 'class': spec };
 			}
 
@@ -9476,7 +9476,7 @@ function Calendar_constructor(element, overrides) {
 
 
 	// Given an event's allDay status and start date, return what its fallback end date should be.
-	// TODO: rename to computeDefaultEventEnd
+	//  rename to computeDefaultEventEnd
 	t.getDefaultEventEnd = function(allDay, zonedStart) {
 		var end = zonedStart.clone();
 
@@ -9746,7 +9746,7 @@ function Calendar_constructor(element, overrides) {
 	
 	/* Event Fetching/Rendering
 	-----------------------------------------------------------------------------*/
-	// TODO: going forward, most of this stuff should be directly handled by the view
+	//  going forward, most of this stuff should be directly handled by the view
 
 
 	function refetchEvents() { // can be called as an API method
@@ -9911,7 +9911,7 @@ function Calendar_constructor(element, overrides) {
 
 	/* Height "Freezing"
 	-----------------------------------------------------------------------------*/
-	// TODO: move this into the view
+	//  move this into the view
 
 	t.freezeContentHeight = freezeContentHeight;
 	t.unfreezeContentHeight = unfreezeContentHeight;
@@ -10024,7 +10024,7 @@ Calendar.defaults = {
 		next: "next",
 		prevYear: "prev year",
 		nextYear: "next year",
-		year: 'year', // TODO: locale files need to specify this
+		year: 'year', //  locale files need to specify this
 		today: 'today',
 		month: 'month',
 		week: 'week',
@@ -10078,7 +10078,7 @@ Calendar.englishDefaults = { // used by lang.js
 
 
 Calendar.rtlDefaults = { // right-to-left defaults
-	header: { // TODO: smarter solution (first/center/last ?)
+	header: { //  smarter solution (first/center/last ?)
 		left: 'next,prev today',
 		center: '',
 		right: 'title'
@@ -10102,8 +10102,8 @@ Calendar.rtlDefaults = { // right-to-left defaults
 var langOptionHash = FC.langs = {}; // initialize and expose
 
 
-// TODO: document the structure and ordering of a FullCalendar lang file
-// TODO: rename everything "lang" to "locale", like what the moment project did
+//  document the structure and ordering of a FullCalendar lang file
+//  rename everything "lang" to "locale", like what the moment project did
 
 
 // Initialize jQuery UI datepicker translations while using some of the translations
@@ -10250,8 +10250,8 @@ var momComputableOptions = {
 
 
 // options that should be computed off live calendar options (considers override options)
-// TODO: best place for this? related to lang?
-// TODO: flipping text based on isRTL is a bad idea because the CSS `direction` might want to handle it
+//  best place for this? related to lang?
+//  flipping text based on isRTL is a bad idea because the CSS `direction` might want to handle it
 var instanceComputableOptions = {
 
 	// Produces format strings for results like "Mo 16"
@@ -10303,7 +10303,7 @@ FC.lang('en', Calendar.englishDefaults);
 
 /* Top toolbar area with buttons and title
 ----------------------------------------------------------------------------------------------------------------------*/
-// TODO: rename all header-related things to "toolbar"
+//  rename all header-related things to "toolbar"
 
 function Header(calendar, options) {
 	var t = this;
@@ -10805,7 +10805,7 @@ function EventManager(options) { // assumed to be a calendar
 
 		if (source) {
 
-			// TODO: repeat code, same code for event classNames
+			//  repeat code, same code for event classNames
 			if (source.className) {
 				if (typeof source.className === 'string') {
 					source.className = source.className.split(/\s+/);
@@ -11113,7 +11113,7 @@ function EventManager(options) { // assumed to be a calendar
 		if (eventProps.allDay) {
 			eventProps.start.stripTime();
 			if (eventProps.end) {
-				// TODO: consider nextDayThreshold here? If so, will require a lot of testing and adjustment
+				//  consider nextDayThreshold here? If so, will require a lot of testing and adjustment
 				eventProps.end.stripTime();
 			}
 		}
@@ -11303,7 +11303,7 @@ function EventManager(options) { // assumed to be a calendar
 	//
 	// Returns a function that can be called to undo all the operations.
 	//
-	// TODO: don't use so many closures. possible memory issues when lots of events with same ID.
+	//  don't use so many closures. possible memory issues when lots of events with same ID.
 	//
 	function mutateEvents(events, clearEnd, allDay, dateDelta, durationDelta, miscProps) {
 		var isAmbigTimezone = t.getIsAmbigTimezone();
@@ -11499,7 +11499,7 @@ function EventManager(options) { // assumed to be a calendar
 		if (constraint != null) {
 
 			// not treated as an event! intermediate data structure
-			// TODO: use ranges in the future
+			//  use ranges in the future
 			constraintEvents = constraintToEvents(constraint);
 
 			anyContainment = false;
@@ -11670,7 +11670,7 @@ var BasicView = FC.BasicView = View.extend({
 	// Generates the DayGrid object this view needs. Draws from this.dayGridClass
 	instantiateDayGrid: function() {
 		// generate a subclass on the fly with BasicView-specific behavior
-		// TODO: cache this subclass
+		//  cache this subclass
 		var subclass = this.dayGridClass.extend(basicDayGridMethods);
 
 		return new subclass(this);
@@ -11709,7 +11709,7 @@ var BasicView = FC.BasicView = View.extend({
 	// Renders the view into `this.el`, which should already be assigned
 	renderDates: function() {
 
-		this.dayNumbersVisible = this.dayGrid.rowCnt > 1; // TODO: make grid responsible
+		this.dayNumbersVisible = this.dayGrid.rowCnt > 1; //  make grid responsible
 		this.weekNumbersVisible = this.opt('weekNumbers');
 		this.dayGrid.numbersVisible = this.dayNumbersVisible || this.weekNumbersVisible;
 
@@ -12445,13 +12445,13 @@ var AgendaView = FC.AgendaView = View.extend({
 
 
 	getHitSpan: function(hit) {
-		// TODO: hit.component is set as a hack to identify where the hit came from
+		//  hit.component is set as a hack to identify where the hit came from
 		return hit.component.getHitSpan(hit);
 	},
 
 
 	getHitEl: function(hit) {
-		// TODO: hit.component is set as a hack to identify where the hit came from
+		//  hit.component is set as a hack to identify where the hit came from
 		return hit.component.getHitEl(hit);
 	},
 
@@ -12562,7 +12562,7 @@ var AgendaView = FC.AgendaView = View.extend({
 
 
 // Methods that will customize the rendering behavior of the AgendaView's timeGrid
-// TODO: move into TimeGrid
+//  move into TimeGrid
 var agendaTimeGridMethods = {
 
 

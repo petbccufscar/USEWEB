@@ -49,7 +49,7 @@ function pickBy(fn, moments) {
     return res;
 }
 
-// TODO: Use [].sort instead?
+// Use [].sort instead?
 export function min () {
     var args = [].slice.call(arguments, 0);
 

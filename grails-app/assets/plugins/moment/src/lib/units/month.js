@@ -128,7 +128,7 @@ export function localeMonthsParse (monthName, format, strict) {
         this._shortMonthsParse = [];
     }
 
-    // TODO: add sorting
+    //  add sorting
     // Sorting makes sure if one month (or abbr) is a prefix of another
     // see sorting in computeMonthsParse
     for (i = 0; i < 12; i++) {
@@ -168,7 +168,7 @@ export function setMonth (mom, value) {
             value = toInt(value);
         } else {
             value = mom.localeData().monthsParse(value);
-            // TODO: Another silent failure?
+            //  Another silent failure?
             if (typeof value !== 'number') {
                 return mom;
             }
