@@ -150,13 +150,21 @@
 
                                             <div class="row">
 
-                                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                                    <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                                                        <label class="control-label" for="nome_completo">Nome Completo <small>(required)</small></label>
-                                                        <input name="nomeCompleto" id="nome_completo" type="text" class="form-control" required>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-3 col-sm-3 col-xs-3">Custom Mask</label>
+                                                    <div class="col-md-9 col-sm-9 col-xs-9">
+                                                        <input type="text" class="form-control" data-inputmask="'mask': '99-999999'">
+                                                        <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
                                                     </div>
                                                 </div>
 
+
+                                                %{--<div class="col-md-12 col-sm-12 col-xs-12">--}%
+                                                    %{--<div class="col-md-12 col-sm-12 col-xs-12 form-group">--}%
+                                                        %{--<label class="control-label" for="CEP">CEP: <small>(required)</small></label>--}%
+                                                        %{--<input name="CEP" id="CEP" type="text" class="form-control" data-inputmask="'mask': '99999-999'">--}%
+                                                    %{--</div>--}%
+                                                %{--</div>--}%
                                             </div>
                                         </div>
 
@@ -292,6 +300,6 @@
     <asset:javascript src="SmartWizard/js/jquery.bootstrap.wizard.js"/>
     <asset:javascript src="SmartWizard/js/gsdk-bootstrap-wizard.js"/>
     <asset:javascript src="SmartWizard/js/jquery.validate.min.js"/>
-
+    <asset:javascript src="jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"/>
 </content>
 </html>
