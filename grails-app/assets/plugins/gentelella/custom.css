@@ -93,8 +93,7 @@
   text-align: center;
   /*position: fixed;*/
   display: block;
-  background: #172d44;
-}
+  background: #172d44; }
 
 .nav-sm .profile {
   display: none; }
@@ -1921,7 +1920,7 @@ span.section {
   width: 100%; }
 
 .form-horizontal .control-label {
-  padding-top: 8px; }
+  padding-top: 8px;  }
 
 .form-control:focus {
   border-color: #CCD0D7;

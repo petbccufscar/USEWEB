@@ -4,6 +4,7 @@
     <title>Cadastrar</title>
 
     <asset:stylesheet src="SmartWizard/css/gsdk-bootstrap-wizard.css"/>
+    <asset:stylesheet src="default/general.css"/>
 
 </head>
 
@@ -168,52 +169,86 @@
                                             </div>
                                         </div>
 
+                                        %{--aba contato--}%
                                         <div class="tab-pane" id="contato">
+
+                                            <div class="content_x">
                                             <div class="row">
-                                                <div class="col-sm-12">
-                                                    <h4 class="info-text">Are you living in a nice area?</h4>
-                                                </div>
+                                                <div class="col-md-12 col-sm-12 col-xs-12">
 
-                                                <div class="col-sm-7 col-sm-offset-1">
-                                                    <div class="form-group">
-                                                        <label>Street Name</label>
-                                                        <input type="text" class="form-control" placeholder="5h Avenue">
-                                                    </div>
-                                                </div>
+                                                    <div class="accordion" id="accordion" role="tablist"
+                                                         aria-multiselectable="true">
 
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label>Street Number</label>
-                                                        <input type="text" class="form-control" placeholder="242">
-                                                    </div>
-                                                </div>
+                                                        %{--aba telefone--}%
+                                                        <div class="panel">
+                                                            <a class="panel-heading colapsed" role="tab" id="abaTelefone"
+                                                               data-toggle="collapse" data-parent="#accordion"
+                                                               href="#conteudoTelefone" aria-expanded="false"
+                                                               aria-controls="conteudoTelefone">
+                                                                <h4 class="panel-title">Telefones</h4>
+                                                            </a>
 
-                                                <div class="col-sm-5 col-sm-offset-1">
-                                                    <div class="form-group">
-                                                        <label>City</label>
-                                                        <input type="text" class="form-control"
-                                                               placeholder="New York...">
-                                                    </div>
-                                                </div>
+                                                            <div id="conteudoTelefone" class="panel-collapse collapse" role="tabpanel" aria-labelledby="abaTelefone">
+                                                                <div class="panel-body">
+                                                                    %{--campo telefone--}%
+                                                                    <div class="telefone col-md-6 col-sm-6 col-xs-12">
+                                                                        <div class="x_panel">
+                                                                            <form class="form-horizontal form-label-left">
 
-                                                <div class="col-sm-5">
-                                                    <div class="form-group">
-                                                        <label>Country</label><br>
-                                                        <select name="country" class="form-control">
-                                                            <option value="Afghanistan">Afghanistan</option>
-                                                            <option value="Albania">Albania</option>
-                                                            <option value="Algeria">Algeria</option>
-                                                            <option value="American Samoa">American Samoa</option>
-                                                            <option value="Andorra">Andorra</option>
-                                                            <option value="Angola">Angola</option>
-                                                            <option value="Anguilla">Anguilla</option>
-                                                            <option value="Antarctica">Antarctica</option>
-                                                            <option value="...">...</option>
-                                                        </select>
+                                                                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                                                                    <label class="control-label" for="tipoTelefone">Tipo</label>
+                                                                                    <input name="tipoTelefone" id="tipoTelefone" type="text" placeholder="Residencial" class="form-control">
+                                                                                </div>
+
+                                                                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                                                                    <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
+                                                                                    <input name="numeroTelefone" id="numeroTelefone" type="text" class="form-control has-feedback-left" placeholder="(xx) xxxxx-xxxx">
+                                                                                </div>
+
+                                                                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                                                                    <label class="control-label" for="observacaoTelefone">Observações</label>
+                                                                                    <textarea name="observacaoTelefone" id="observacaoTelefone" class="form-control" placeholder="Aqui vão as observações" style="resize:none;"></textarea>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+                                                                    </div>
+                                                                    %{--fim campo telefone--}%
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        %{--fim aba telefone--}%
+
+                                                        %{--aba email--}%
+                                                        <div class="panel">
+                                                            <a class="panel-heading colapsed" role="tab" id="abaEmail"
+                                                               data-toggle="collapse" data-parent="#accordion"
+                                                               href="#conteudoEmail" aria-expanded="false"
+                                                               aria-controls="conteudoEmail">
+                                                                <h4 class="panel-title">E-mails</h4>
+                                                            </a>
+
+                                                            <div id="conteudoEmail" class="panel-collapse collapse" role="tabpanel" aria-labelledby="abaEmail">
+                                                                <div class="panel-body">
+                                                                    %{--campo email--}%
+                                                                    <div class="col-md-6 col-sm-6 col-xs-6 form-group">
+                                                                        <span class="fa fa-mail-forward form-control-feedback left" aria-hidden="true"></span>
+                                                                        <input name="enderecoEmail" id="enderecoEmail" type="text" class="form-control has-feedback-left" placeholder="exemplo@email.com">
+                                                                    </div>
+                                                                    %{--fim campo email--}%
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        %{--fim aba email--}%
+
                                                     </div>
                                                 </div>
                                             </div>
+                                            </div>
+
                                         </div>
+                                        %{--fim aba contato--}%
 
                                         <div class="tab-pane" id="acompanhante">
                                             <div class="row">

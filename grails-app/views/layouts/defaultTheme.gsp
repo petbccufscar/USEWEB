@@ -23,22 +23,22 @@
     %{-- Custom Theme Style --}%
     <asset:stylesheet src="gentelella/custom.css"/>
 
-    <g:layoutHead/>
+<g:layoutHead/>
 </head>
 
 <body class="nav-md">
 <div class="container body">
-    <div class="main_container">
+<div class="main_container">
 
-        <g:render template="/layouts/menu"/>
+<g:render template="/layouts/menu"/>
 
-        <g:render template="/layouts/topnavigation"/>
+<g:render template="/layouts/topnavigation"/>
 
-        <g:layoutBody/>
+<g:layoutBody/>
 
-        <g:render template="/layouts/footer"/>
+<g:render template="/layouts/footer"/>
 
-    </div>
+</div>
 </div>
 
 <!-- jQuery -->
