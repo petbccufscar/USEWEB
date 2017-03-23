@@ -1,0 +1,16 @@
+/*gsdk-bootstreap-wizard*/
+
+.wizard-card .tab-content {
+    font-size: 16px; }
+
+.form-control {
+    border: 1px solid #93A2B2; }
+
+.form-control:focus{
+    border: 1px solid #3472F7; }
+
+.nav-pills > li > a{
+    font-size: 15px; }
+
+.wizard-card[data-color="blue"] .moving-tab{
+    font-size: 15px; }

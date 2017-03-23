@@ -4,6 +4,7 @@
     <title>Cadastrar</title>
 
     <asset:stylesheet src="SmartWizard/css/gsdk-bootstrap-wizard.css"/>
+    <asset:stylesheet src="default/general.css"/>
 
 </head>
 
