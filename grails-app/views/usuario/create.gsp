@@ -150,22 +150,65 @@
                                         <div class="tab-pane" id="endereco">
 
                                             <div class="row">
-
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-3 col-sm-3 col-xs-3">Custom Mask</label>
-                                                    <div class="col-md-9 col-sm-9 col-xs-9">
-                                                        <input type="text" class="form-control" data-inputmask="'mask': '99-999999'">
-                                                        <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
+                                                %{--CEP--}%
+                                                <div class="col-md-2 col-sm-2 col-xs-2 form-group">
+                                                    <div class="col-md-10 col-sm-10 col-xs-10 form-group">
+                                                        <label class="control-label" for="endereco_CEP">CEP:</label>
+                                                        <input name="endereco_CEP" id="endereco_CEP" type="text" class="form-control" data-inputmask="'mask': '99999-999'">
                                                     </div>
                                                 </div>
-
-
-                                                %{--<div class="col-md-12 col-sm-12 col-xs-12">--}%
-                                                    %{--<div class="col-md-12 col-sm-12 col-xs-12 form-group">--}%
-                                                        %{--<label class="control-label" for="CEP">CEP: <small>(required)</small></label>--}%
-                                                        %{--<input name="CEP" id="CEP" type="text" class="form-control" data-inputmask="'mask': '99999-999'">--}%
-                                                    %{--</div>--}%
-                                                %{--</div>--}%
+                                            </div>
+                                            <div class="row">
+                                                %{--Tipo Logradouro--}%
+                                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                                    <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                                        <label class="control-label" for="endereco_tipoLogradouro">Tipo Logradouro:</label><br>
+                                                        <select name="endereco_tipoLogradouro" class="form-control" id="endereco_tipoLogradouro">
+                                                            <option value="tipoLog1">Logradouro 1</option>
+                                                            <option value="tipoLog2">Logradouro 2</option>
+                                                            <option value="tipoLog3">Logradouro 3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                %{--Logradouro--}%
+                                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                                    <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                                        <label class="control-label" for="endereco_logradouro">Logradouro:</label>
+                                                        <input name="endereco_logradouro" id="endereco_logradouro" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                %{--Numero--}%
+                                                <div class="col-md-2 col-sm-2 col-xs-2">
+                                                    <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                                        <label class="control-label" for="endereco_numero">Numero:</label>
+                                                        <input name="endereco_numero" id="endereco_numero" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                %{--Estado--}%
+                                                <div class="col-md-3 col-sm-3 col-xs-3">
+                                                    <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                                        <label class="control-label" for="endereco_estado">Estado:</label>
+                                                        <input name="endereco_estado" id="endereco_estado" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                %{--Cidade--}%
+                                                <div class="col-md-5 col-sm-5 col-xs-5">
+                                                    <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                                        <label class="control-label" for="endereco_cidade">Cidade:</label>
+                                                        <input name="endereco_cidade" id="endereco_cidade" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                %{--Bairro--}%
+                                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                                    <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                                        <label class="control-label" for="endereco_bairro">Bairro:</label>
+                                                        <input name="endereco_bairro" id="endereco_bairro" type="text" class="form-control">
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
 
@@ -336,5 +379,15 @@
     <asset:javascript src="SmartWizard/js/gsdk-bootstrap-wizard.js"/>
     <asset:javascript src="SmartWizard/js/jquery.validate.min.js"/>
     <asset:javascript src="jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"/>
+
+    %{--inicializar contents--}%
+    %{--fonte: https://github.com/RobinHerbots/Inputmask--}%
+    %{--<script> --}%%{--inicializar máscara--}%
+    %{--$(document).ready(function(){--}%
+        %{--$(":input").inputmask();--}%
+    %{--})--}%
+    %{--</script>--}%
+
 </content>
+
 </html>
