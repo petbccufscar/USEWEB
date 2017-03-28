@@ -15,16 +15,16 @@ class BootStrap {
         def terceirizadoRole = new Role(authority: 'ROLE_TERCEIRIZADO').save()
 
 //      Definição dos usuarios
-        def adminUser = new SystemUser(username: 'admin', password: 'admin').save()
+        def adminUser = new SystemUser(username: 'admin', password: '123').save()
         SystemUserRole.create adminUser, adminRole
 
-        def docenteUser = new SystemUser(username: 'docente', password: 'docente').save()
+        def docenteUser = new SystemUser(username: 'docente', password: '123').save()
         SystemUserRole.create docenteUser, docenteRole
 
-        def alunoUser = new SystemUser(username: 'aluno', password: 'aluno').save()
+        def alunoUser = new SystemUser(username: 'aluno', password: '123').save()
         SystemUserRole.create alunoUser, alunoRole
 
-        def terceirizadoUser = new SystemUser(username: 'terceirizado', password: 'terceirizado').save()
+        def terceirizadoUser = new SystemUser(username: 'terceirizado', password: '123').save()
         SystemUserRole.create terceirizadoUser, terceirizadoRole
 
         SystemUserRole.withSession {

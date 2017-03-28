@@ -12,6 +12,7 @@ class Pessoa {
         nomeCompleto(blank:false, size:1..20)
         cpf(nullable:false)
         rg(nullable:true)
+        sexo(blank: true, inList: ["Feminino", "Masculino", "Não determinado"])
         //TODO: Completar e verificar as restrições
     }
 
@@ -24,5 +25,5 @@ class Pessoa {
     String rg
     String orgaoEmissor
     Endereco endereco
-    Sexo sexo
+    String sexo
 }
