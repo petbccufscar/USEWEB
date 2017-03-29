@@ -206,7 +206,17 @@
                                                     </div>
                                                 </div>
                                             </div>
-
+                                            <div class="row">
+                                                %{--Complemento--}%
+                                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                                    <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                                        <label class="control-label"
+                                                               for="endereco_complemento">Complemento:</label>
+                                                        <input name="endereco_complemento" id="endereco_complemento"
+                                                               type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="row">
                                                 %{--Estado--}%
                                                 <div class="col-md-3 col-sm-3 col-xs-3">
