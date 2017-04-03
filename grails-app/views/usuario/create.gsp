@@ -273,6 +273,7 @@
                                                                 </div>
                                                         </div>
 
+                                                        %{--botão mais--}%
                                                         <div class="col-md-12 col-sm-12 col-xs-12 form-group">
                                                             <i onclick="insereCaixaTelefone()" class="fa fa-plus-square"></i>
                                                         </div>
@@ -288,6 +289,7 @@
                                                                 </div>
                                                         </div>
 
+                                                        %{--botão mais--}%
                                                         <div class="col-md-12 col-sm-12 col-xs-12 form-group">
                                                             <i onclick="insereCaixaEmail()" class="fa fa-plus-square"></i>
                                                         </div>

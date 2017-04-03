@@ -13,10 +13,6 @@ function insereCaixaEmail() {
     input.setAttribute("type", "label");
     input.setAttribute("class", "form-control");
     input.setAttribute("placeholder", "exemplo@email.com");
-//        var div1 = "<div class='x_panel'>";
-//        var div2 = "<div class='col-md-12 col-sm-12 col-xs-12 form-group'>";
-//        var label = "<label class='control-label' for='enderecoEmail'>Email</label>";
-//        var input =  "<input name='enderecoEmail' id='enderecoEmail' type='label' class='form-control' placeholder='exemplo@email.com'>";
     div1.append(div2);
     div2.append(label, input);
     $("#email").after(div1);
