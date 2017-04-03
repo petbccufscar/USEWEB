@@ -255,8 +255,8 @@
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
 
                                                     %{--campo telefone--}%
-                                                    <div id="telefone" class="col-md-6 col-sm-6 col-xs-12">
-                                                        <div class="x_panel">
+                                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                                        <div id="telefone" class="x_panel">
                                                                 <div class="col-md-12 col-sm-12 col-xs-12 form-group">
                                                                     <label class="control-label" for="tipoTelefone">Telefone</label>
                                                                     <input name="tipoTelefone" id="tipoTelefone" type="text" placeholder="Residencial" class="form-control">
@@ -273,20 +273,24 @@
                                                                 </div>
                                                         </div>
 
-                                                        <label id="maisTelefone" onclick="insereCaixaTelefone()">+++++++</label>
+                                                        <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                                            <i onclick="insereCaixaTelefone()" class="fa fa-plus-square"></i>
+                                                        </div>
                                                     </div>
                                                     %{--fim campo telefone--}%
 
                                                     %{--campo email--}%
-                                                    <div id="email" class="col-md-6 col-sm-6 col-xs-12">
-                                                        <div class="x_panel">
+                                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                                        <div id="email" class="x_panel">
                                                                 <div class="col-md-12 col-sm-12 col-xs-12 form-group">
                                                                     <label class="control-label" for="enderecoEmail">Email</label>
                                                                     <input name="enderecoEmail" id="enderecoEmail" type="label" class="form-control" placeholder="exemplo@email.com">
                                                                 </div>
                                                         </div>
 
-                                                        <label id="maisEmail" onclick="insereCaixaEmail()">+++++++</label>
+                                                        <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                                            <i onclick="insereCaixaEmail()" class="fa fa-plus-square"></i>
+                                                        </div>
                                                     </div>
                                                     %{--fim campo email--}%
 
