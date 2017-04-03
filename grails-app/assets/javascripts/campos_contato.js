@@ -19,7 +19,7 @@ function insereCaixaEmail() {
 //        var input =  "<input name='enderecoEmail' id='enderecoEmail' type='label' class='form-control' placeholder='exemplo@email.com'>";
     div1.append(div2);
     div2.append(label, input);
-    $("#email").before(div1);
+    $("#email").after(div1);
 }
 
 function insereCaixaTelefone(){
