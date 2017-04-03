@@ -23,6 +23,7 @@
         <div class="clearfix"></div>
 
         <div class="row">
+
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_content">
@@ -239,76 +240,63 @@
                                                 %{--Bairro--}%
                                                 <div class="col-md-8 col-sm-8 col-xs-8">
                                                     <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                                                        <label class="control-label"
-                                                               for="endereco_bairro">Bairro:</label>
-                                                        <input name="endereco_bairro" id="endereco_bairro" type="text"
-                                                               class="form-control">
+                                                        <label class="control-label" for="endereco_bairro">Bairro:</label>
+                                                        <input name="endereco_bairro" id="endereco_bairro" type="text" class="form-control">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        %{--Fim Endereco--}%
 
-                                        %{--Início Contato--}%
+                                        %{--aba contato--}%
                                         <div class="tab-pane" id="contato">
 
                                             <div class="content_x">
-                                                <div class="row">
-                                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <div class="row">
+                                                <div class="col-md-12 col-sm-12 col-xs-12">
 
-                                                        %{--campo telefone--}%
-                                                        <div class="col-md-6 col-sm-6 col-xs-12">
-                                                            <div class="x_panel">
+                                                    %{--campo telefone--}%
+                                                    <div id="telefone" class="col-md-6 col-sm-6 col-xs-12">
+                                                        <div class="x_panel">
                                                                 <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                                                                    <label class="control-label"
-                                                                           for="tipoTelefone">Telefone</label>
-                                                                    <input name="tipoTelefone" id="tipoTelefone"
-                                                                           type="text" placeholder="Residencial"
-                                                                           class="form-control">
+                                                                    <label class="control-label" for="tipoTelefone">Telefone</label>
+                                                                    <input name="tipoTelefone" id="tipoTelefone" type="text" placeholder="Residencial" class="form-control">
                                                                 </div>
 
                                                                 <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                                                                    <span class="fa fa-phone form-control-feedback left"
-                                                                          aria-hidden="true"></span>
-                                                                    <input name="numeroTelefone" id="numeroTelefone"
-                                                                           type="text"
-                                                                           class="form-control has-feedback-left"
-                                                                           placeholder="(xx) xxxxx-xxxx">
+                                                                    <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
+                                                                    <input name="numeroTelefone" id="numeroTelefone" type="text" class="form-control has-feedback-left" placeholder="(xx) xxxxx-xxxx">
                                                                 </div>
 
                                                                 <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                                                                    <label class="control-label"
-                                                                           for="observacaoTelefone">Observações</label>
-                                                                    <textarea name="observacaoTelefone"
-                                                                              id="observacaoTelefone"
-                                                                              class="form-control"
-                                                                              placeholder="Aqui vão as observações"
-                                                                              style="resize:none;"></textarea>
+                                                                    <label class="control-label" for="observacaoTelefone">Observações</label>
+                                                                    <textarea name="observacaoTelefone" id="observacaoTelefone" class="form-control" placeholder="Aqui vão as observações" style="resize:none;"></textarea>
                                                                 </div>
-                                                            </div>
                                                         </div>
-                                                        %{--fim campo telefone--}%
 
-                                                        %{--campo email--}%
-                                                        <div class="col-md-6 col-sm-6 col-xs-12">
-                                                            <div class="x_panel">
+                                                        <label id="maisTelefone" onclick="insereCaixaTelefone()">+++++++</label>
+                                                    </div>
+                                                    %{--fim campo telefone--}%
+
+                                                    %{--campo email--}%
+                                                    <div id="email" class="col-md-6 col-sm-6 col-xs-12">
+                                                        <div class="x_panel">
                                                                 <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                                                                    <label class="control-label"
-                                                                           for="enderecoEmail">Email</label>
-                                                                    <input name="enderecoEmail" id="enderecoEmail"
-                                                                           type="email" class="form-control"
-                                                                           placeholder="exemplo@email.com">
+                                                                    <label class="control-label" for="enderecoEmail">Email</label>
+                                                                    <input name="enderecoEmail" id="enderecoEmail" type="label" class="form-control" placeholder="exemplo@email.com">
                                                                 </div>
-                                                            </div>
                                                         </div>
+
+                                                        <label id="maisEmail" onclick="insereCaixaEmail()">+++++++</label>
                                                     </div>
                                                     %{--fim campo email--}%
+
                                                 </div>
                                             </div>
-                                        </div>
-                                        %{--fim Contato--}%
+                                            </div>
 
-                                        %{--Início Acompanhante--}%
+                                        </div>
+                                        %{--fim aba contato--}%
+
                                         <div class="tab-pane" id="acompanhante">
                                             <div class="row">
                                                 <div class="col-sm-12">
@@ -355,9 +343,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        %{--Fim Acompanhante--}%
+
                                     </div>
-                                    %{--Fim Wizard Content--}%
 
                                     <div class="wizard-footer height-wizard">
                                         <div class="pull-right">
@@ -376,12 +363,14 @@
                                                    name='previous'
                                                    value="${message(code: 'default.button.previous.label', default: 'Anterior')}"/>
                                         </div>
+
                                         <div class="clearfix"></div>
                                     </div>
+
                                 </g:form>
                             </div>
                         </div>
-                        %{--Fim wizard container--}%
+                        <!-- wizard container -->
                     </div>
                 </div>
             </div>
@@ -402,7 +391,7 @@
 
     %{--inicializar contents--}%
     <asset:javascript src="mask.js"/>
-
+    <asset:javascript src="campos_contato.js"/>
 </content>
 
 </html>
