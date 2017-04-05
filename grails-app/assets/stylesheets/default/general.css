@@ -14,3 +14,17 @@
 
 .wizard-card[data-color="blue"] .moving-tab{
     font-size: 15px; }
+
+/*smartWizard*/
+
+.buttonNext{
+    font-size: 16px;
+}
+
+.buttonPrevious{
+    font-size: 16px;
+}
+
+.buttonFinish{
+    font-size: 16px;
+}
