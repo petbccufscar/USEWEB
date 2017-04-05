@@ -23,6 +23,25 @@
         <div class="clearfix"></div>
 
         <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel" id="dadosEstaticosUsuario">
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <label class="control-label" for="nomeEstatico">Nome</label>
+                        <input class="form-control" id="nomeEstatico" type="text" disabled>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <label class="control-label" for="numeroUSE">Número USE</label>
+                        <input class="form-control" id="numeroUSE" type="text" disabled>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <label class="control-label" for="dataCadastro">Data Cadastro</label>
+                        <input class="form-control" id="dataCadastro" type="text" data-inputmask="'mask': '99/99/9999'" disabled>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
 
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
@@ -91,7 +110,7 @@
                                                     <label class="control-label"
                                                            for="data_nascimento"
                                                     >Data de Nascimento</label>
-                                                    <input name="cep" id="data_nascimento" type="text"
+                                                    <input name="data_nascimento" id="data_nascimento" type="text"
                                                            class="form-control"
                                                            data-inputmask="'mask': '99/99/9999'">
                                                 </div>
