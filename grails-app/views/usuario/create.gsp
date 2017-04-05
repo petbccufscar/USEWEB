@@ -548,7 +548,7 @@
 
                                                                                             %{--campo telefone--}%
                                                                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                                                                <div id="telefone" class="x_panel">
+                                                                                                <div id="telefoneAcompanhante" class="x_panel">
                                                                                                     <div class="col-md-12 col-sm-12 col-xs-12 form-group">
                                                                                                         <label class="control-label" for="tipoTelefone_acompanhante">Telefone</label>
                                                                                                         <input name="tipoTelefone" id="tipoTelefone_acompanhante" type="text" placeholder="Residencial" class="form-control">
@@ -567,14 +567,14 @@
 
                                                                                                 %{--botão mais--}%
                                                                                                 <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                                                                                                    <i onclick="insereCaixaTelefone()" class="fa fa-plus-square"></i>
+                                                                                                    <i onclick="insereCaixaTelefoneAcompanhante()" class="fa fa-plus-square"></i>
                                                                                                 </div>
                                                                                             </div>
                                                                                             %{--fim campo telefone--}%
 
                                                                                             %{--campo email--}%
                                                                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                                                                <div id="email" class="x_panel">
+                                                                                                <div id="emailAcompanhante" class="x_panel">
                                                                                                     <div class="col-md-12 col-sm-12 col-xs-12 form-group">
                                                                                                         <label class="control-label" for="enderecoEmail_acompanhante">Email</label>
                                                                                                         <input name="enderecoEmail" id="enderecoEmail_acompanhante" type="label" class="form-control" placeholder="exemplo@email.com">
@@ -583,7 +583,7 @@
 
                                                                                                 %{--botão mais--}%
                                                                                                 <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                                                                                                    <i onclick="insereCaixaEmail()" class="fa fa-plus-square"></i>
+                                                                                                    <i onclick="insereCaixaEmailAcompanhante()" class="fa fa-plus-square"></i>
                                                                                                 </div>
                                                                                             </div>
                                                                                             %{--fim campo email--}%
