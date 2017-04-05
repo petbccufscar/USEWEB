@@ -408,7 +408,7 @@
                                                         <div class="modal-header">
                                                             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
                                                             </button>
-                                                            <h4 class="modal-title" id="myModalLabel">Cadastro do acompanhante</h4>
+                                                            <h3 class="modal-title" id="myModalLabel">Cadastro do acompanhante</h3>
                                                         </div>
 
                                                         <div class="col-md-12 col-sm-12 col-xs-12 form-group">
@@ -419,8 +419,8 @@
                                                                         <div class="row">
                                                                             <form class="form-vertical">
 
+                                                                                <h2 class="modal-title" id="myModalLabelDadosGerais">Dados gerais</h2>
                                                                                 <div class="x_panel">
-                                                                                    <h3 class="modal-title" id="myModalLabelDadosGerais">Dados gerais</h3>
                                                                                     <div class="col-md-12 col-sm-12 col-xs-12 form-group">
                                                                                         <label class="control-label"
                                                                                                for="nome_completo_acompanhante1"
@@ -469,6 +469,7 @@
                                                                                 </div><!--panel1-->
 
 
+                                                                                <h2 class="modal-title" id="myModalLabelDadosGerais">Endereço</h2>
                                                                                 <div class="x_panel">
                                                                                     <div class="row">
                                                                                         %{--CEP--}%
@@ -542,6 +543,7 @@
                                                                                     </div>
                                                                                 </div> <!--panel2-->
 
+                                                                                <h2 class="modal-title" id="myModalLabel">Contato</h2>
                                                                                 <div class="x_panel">
                                                                                     <div class="row">
                                                                                         <div class="col-md-12 col-sm-12 col-xs-12">
