@@ -18,16 +18,34 @@
 /*smartWizard*/
 
 .buttonNext{
-    font-size: 16px;
+    background: #26B99A;
+    border: 1px solid #169F85;
+    border-radius: 3px;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 5px;
+    color: white;
 }
 
-.buttonPrevious{
-    font-size: 16px;
+.buttonPrevious, .buttonFinish{
+    background-color: #337ab7;
+    border: 1px solid #364B5F;
+    border-radius: 3px;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 5px;
+    color: white;
 }
 
-.buttonFinish{
-    font-size: 16px;
+.buttonNext:hover, .buttonNext:focus, .buttonNext:active, .buttonNext.active, .open .dropdown-toggle.buttonNext {
+    background: #169F85;
+    color: white;
 }
+
+.buttonPrevious:hover, .buttonPrevious:focus, .buttonPrevious:active, .buttonPrevious.active, .open .dropdown-toggle.buttonPrevious {
+    color: #FFFFFF;
+    background-color: #364B5F;
+    border-color: #394D5F; }
 
 .control-label{
     font-size: 16px;
