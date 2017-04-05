@@ -21,7 +21,7 @@ function SmartWizard(target, options) {
     this.elmStepContainer = $('<div></div>').addClass("stepContainer");
     this.loader = $('<div>Loading</div>').addClass("loader");
     this.buttons = {
-        // finish  : $('<a>'+options.labelFinish+'</a>').attr("href","#").addClass("buttonFinish"),
+        finish  : $('<a>'+options.labelFinish+'</a>').attr("href","#").addClass("btn buttonFinish"),
         next : $('<a>'+options.labelNext+'</a>').attr("href","#").addClass("btn buttonNext"),
         previous : $('<a>'+options.labelPrevious+'</a>').attr("href","#").addClass("btn buttonPrevious")
 
@@ -55,7 +55,7 @@ function SmartWizard(target, options) {
         $this.target.append($this.elmStepContainer);
         elmActionBar.append($this.buttons.previous)
                     .append($this.buttons.next)
-                    // .append($this.buttons.finish);
+                    .append($this.buttons.finish);
         $this.target.append(elmActionBar);
         this.contentWidth = $this.elmStepContainer.width();
 
@@ -435,7 +435,7 @@ $.fn.smartWizard.defaults = {
     contentCache:true, // cache step contents, if false content is fetched always from ajax url
     cycleSteps: false, // cycle step navigation
     enableFinishButton: false, // make finish button enabled always
-	hideButtonsOnDisabled: false, // when the previous/next/finish buttons are disabled, hide them instead?
+	hideButtonsOnDisabled: true, // when the previous/next/finish buttons are disabled, hide them instead?
     errorSteps:[],    // Array Steps with errors
     labelNext:'Próximo',
     labelPrevious:'Anterior',
