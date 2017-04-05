@@ -4,6 +4,7 @@
     <meta name="layout" content="defaultTheme"/>
     <title>Cadastrar</title>
     %{--teste branch--}%
+    %{--teste branch 2--}%
     <asset:stylesheet src="SmartWizard/css/gsdk-bootstrap-wizard.css"/>
     <asset:stylesheet src="default/general.css"/>
     <asset:stylesheet src="datatables/datatables.net-bs/css/dataTables.bootstrap.min.css"/>
