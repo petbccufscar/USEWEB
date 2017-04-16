@@ -3,6 +3,8 @@ package useweb
 import useweb.authentication.SystemUser
 import useweb.authentication.SystemUserRole
 import useweb.authentication.Role
+import useweb.cadastroUsuario.CorRaca
+import useweb.cadastroUsuario.Etnia
 
 class BootStrap {
 
@@ -35,6 +37,36 @@ class BootStrap {
         assert SystemUser.count() == 4
         assert Role.count() == 4
         assert SystemUserRole.count() == 4
+
+        // Tipos predefinidos
+        new Etnia(etnia: "Branco").save()
+        new Etnia(etnia: "Negro").save()
+        new Etnia(etnia: "Indígena").save()
+        new Etnia(etnia: "Pardo").save()
+        new Etnia(etnia: "Mulato").save()
+        new Etnia(etnia: "Caboclo").save()
+        new Etnia(etnia: "Cafuzo").save()
+        new Etnia(etnia: "Não declarado").save()
+        new Etnia(etnia: "Não sei").save()
+
+        new CorRaca(corRaca: "Branco").save()
+        new CorRaca(corRaca: "Pardo").save()
+        new CorRaca(corRaca: "Preto").save()
+        new CorRaca(corRaca: "Amarelo").save()
+        new CorRaca(corRaca: "Indígena").save()
+        new CorRaca(corRaca: "Não declarado").save()
+        new CorRaca(corRaca: "Não sei").save()
+        /*
+        new Genero(genero : "Bissexual").save()
+        new Genero(genero : "Heterossexual").save()
+        new Genero(genero : "Homossexual").save()
+        new Genero(genero : "Assexual").save()
+        new Genero(genero : "Não declarado").save()
+        new Genero(genero : "Não sei").save()
+        */
+
+
+
     }
 
     def destroy = {
