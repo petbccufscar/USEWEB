@@ -12,6 +12,9 @@ class Usuario extends Pessoa {
 //    static hasMany = []
 
     static constraints = {
+        statusInatividade(nullable: true)
+        dataInatividade(nullable: true)
+        motivoInatividade(nullable: true)
     }
 
     Integer cns
@@ -22,7 +25,7 @@ class Usuario extends Pessoa {
     Date dataInatividade
     String motivoInatividade
     String observacao
-    Escolaridade escolaridade
-    Etnia etnia
-    CorRaca corRaca
+//    Escolaridade escolaridade
+//    Etnia etnia
+//    CorRaca corRaca
 }

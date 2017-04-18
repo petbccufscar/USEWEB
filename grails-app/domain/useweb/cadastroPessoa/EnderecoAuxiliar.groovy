@@ -15,5 +15,4 @@ class EnderecoAuxiliar {
     String logradouro
     String estado
     String cidade
-    TipoLogradouro tipoLogradouro
 }

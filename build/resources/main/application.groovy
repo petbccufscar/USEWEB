@@ -1,19 +1,19 @@
-
 // Added by the Spring Security Core plugin:
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'useweb.authentication.SystemUser'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'useweb.authentication.SystemUserRole'
 grails.plugin.springsecurity.authority.className = 'useweb.authentication.Role'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
-	[pattern: '/',               access: ['permitAll']],
-	[pattern: '/error',          access: ['permitAll']],
-	[pattern: '/SystemUser/index',          access: ['permitAll']],
-	[pattern: '/login.gsp',      access: ['permitAll']],
-	[pattern: '/shutdown',       access: ['permitAll']],
-	[pattern: '/assets/**',      access: ['permitAll']],
-	[pattern: '/**/js/**',       access: ['permitAll']],
-	[pattern: '/**/css/**',      access: ['permitAll']],
-	[pattern: '/**/images/**',   access: ['permitAll']],
-	[pattern: '/**/favicon.ico', access: ['permitAll']]
+	[pattern: '/',               	access: ['permitAll']],
+	[pattern: '/error',          	access: ['permitAll']],
+	[pattern: '/SystemUser/index',  access: ['permitAll']],
+	[pattern: '/login.gsp',      	access: ['permitAll']],
+	[pattern: '/shutdown',       	access: ['permitAll']],
+	[pattern: '/assets/**',      	access: ['permitAll']],
+	[pattern: '/**/js/**',       	access: ['permitAll']],
+	[pattern: '/**/css/**',      	access: ['permitAll']],
+	[pattern: '/**/images/**',   	access: ['permitAll']],
+	[pattern: '/**/favicon.ico', 	access: ['permitAll']],
+	[pattern: '/dbconsole/**',   	access: ['permitAll']]
 ]
 
 grails.plugin.springsecurity.filterChain.chainMap = [
