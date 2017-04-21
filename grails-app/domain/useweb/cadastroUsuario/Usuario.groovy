@@ -11,6 +11,7 @@ class Usuario extends Pessoa {
     //TODO: Usuario também tem um "cuidador", verificar como fazer essa associação
 //    static hasMany = []
 
+
     static constraints = {
         statusInatividade(nullable: true)
         dataInatividade(nullable: true)
