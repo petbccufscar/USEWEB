@@ -3,27 +3,38 @@ package useweb.cadastroPessoa
 class Pessoa {
 
     static mapping = {
-//        id name: 'numeroCadastro'
     }
 
-    static hasMany = [emails : Email, telefones: Telefone]
+    static hasMany = [telefones: Telefone]
 
-    static constraints = { //Aqui vão regras de validação
-        nomeCompleto(blank:false, size:1..20)
-        cpf(nullable:true)
-        rg(nullable:true)
-        sexo(blank: true, inList: ["Feminino", "Masculino", "Não Informado"])
-        //TODO: Completar e verificar as restrições
+    static constraints = {
+        nome blank: false, size: 1..100
+        nomeSocial nullable: true, size: 1..100
+        rg nullable: true
+        cpf nullable: true, size: 1..11
+        dataNascimento blank: false
+        dataNaoConfirmada blank: false
+        dataCadastro blank: false
+
+        email1 nullable: false
+        email2 nullable: false
+
+        sexo inList: ["Feminino", "Masculino", "Indeterminado"]
+        tipoSanguineo inList: ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"]
     }
 
-    String nomeCompleto
-//    Integer numeroCadastro
+    String nome
     String nomeSocial
-//    Date dataNascimento
-//    Date dataCadastro
-    String cpf
     String rg
-    String orgaoEmissor
-    Endereco endereco
+    String cpf
+    Date dataNascimento
+    boolean dataNaoConfirmada
+    Date dataCadastro
     String sexo
+    String tipoSanguineo
+
+    String email1
+    String email2
+
+    String enderecoPessoa
 }

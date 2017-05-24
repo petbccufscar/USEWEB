@@ -1,23 +1,20 @@
 package useweb.cadastroPessoa
 
-class Endereco{
+class Endereco {
 
-    //TODO: Fazer uma pk composta (é necessário "implements serializable"?)
-    // Como vamos mapear isso??
     static mapping = {
-
     }
 
+    static belongsTo = [cidade: Cidade]
+    static hasMany = []
+
     static constraints = {
-        //TODO: Verificar as restrições
-        cep(nullable:true, blank:true)
+        cep blank: false, size: 1..8
+        logradouro blank: false
+        bairro blank: false
     }
 
     String cep
     String logradouro
-    Integer numero
-    String complemento
     String bairro
-    String estado
-    String cidade
 }

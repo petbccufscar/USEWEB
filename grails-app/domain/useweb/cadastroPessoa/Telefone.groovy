@@ -3,16 +3,23 @@ package useweb.cadastroPessoa
 class Telefone {
 
     static mapping = {
-        //TODO: Fazer uma pk composta (é necessário "implements serializable"?)
-        //id composite: ['numero', 'ddd']
     }
 
+    static hasMany = [pessoa: Pessoa]
+
     static constraints = {
-        //TODO: Verificar as restrições
+        numero blank: false, size: 1..9
+        ddd blank: false, size: 1..2
+        ramal nullable: true
+        tipo blank: false,  inList: ["Residencial", "Comercial", "Institucional", "Não Informado"]
+        observacao nullable: true
     }
 
     String numero
     String ddd
+    String ramal
     String tipo
     String observacao
 }
+
+

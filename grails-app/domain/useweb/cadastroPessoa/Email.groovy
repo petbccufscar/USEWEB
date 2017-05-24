@@ -3,14 +3,14 @@ package useweb.cadastroPessoa
 class Email {
 
     static mapping = {
-        id name : 'email'
+        id name : "email"
     }
 
     static belongsTo = [pessoa:Pessoa]
 
 
     static constraints = {
-        //TODO: Completar as contraints
+        email blank: false, size: 1..100
     }
 
     String email
