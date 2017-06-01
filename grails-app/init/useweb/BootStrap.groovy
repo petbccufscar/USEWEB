@@ -3,8 +3,8 @@ package useweb
 import useweb.authentication.SystemUser
 import useweb.authentication.SystemUserRole
 import useweb.authentication.Role
-import useweb.cadastroUsuario.CorRaca
-import useweb.cadastroUsuario.Etnia
+import useweb.cadastroPessoa.CorRaca
+import useweb.cadastroPessoa.Etnia
 
 class BootStrap {
 

@@ -2,9 +2,6 @@ package useweb.cadastroPessoa
 
 class Cidade {
 
-    static mapping = {
-    }
-
     static hasMany = [enderecos: Endereco]
     static belongsTo = [estado: Estado]
 

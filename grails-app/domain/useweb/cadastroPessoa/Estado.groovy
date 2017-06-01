@@ -2,9 +2,6 @@ package useweb.cadastroPessoa
 
 class Estado {
 
-    static mapping = {
-    }
-
     static hasMany = [cidades: Cidade]
 
     static constraints = {

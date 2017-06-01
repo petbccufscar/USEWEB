@@ -1,11 +1,11 @@
-package useweb.cadastroUsuario
+package useweb.cadastroPessoa
 
 
 class Etnia {
 
-    String etnia
-
     static constraints = {
         etnia nullable: false, blank: false, unique: true
     }
+
+    String etnia
 }

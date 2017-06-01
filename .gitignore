@@ -3,13 +3,9 @@ Thumbs.db
 .gradle
 build/
 .idea
-*.iml
 *.ipr
 *.iws
 .project
 .settings
 .classpath
 out/
-src/integration-test/
-src/main/
-src/test/

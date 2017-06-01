@@ -54,7 +54,6 @@ class UsuarioController {
         println(dadosGeraisParams+['endereco':endereco])
         usuario.save(flush:true,failOnError: true)
 
-
         render "sucesso"
     }
 

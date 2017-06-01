@@ -5,28 +5,32 @@ class Pessoa {
     static mapping = {
     }
 
-    static hasMany = [telefones: Telefone]
+    static hasMany = [telefones: TelefonePessoa, documentos:Documento, deficiencias:DeficienciaPessoa]
 
     static constraints = {
         nome blank: false, size: 1..100
         nomeSocial nullable: true, size: 1..100
-        rg nullable: true
-        cpf nullable: true, size: 1..11
         dataNascimento blank: false
         dataNaoConfirmada blank: false
         dataCadastro blank: false
 
+        sexo inList: ["Feminino", "Masculino", "Indeterminado", "Não Informado"]
+        tipoSanguineo inList: ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"]
+
         email1 nullable: false
         email2 nullable: false
 
-        sexo inList: ["Feminino", "Masculino", "Indeterminado"]
-        tipoSanguineo inList: ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"]
+        corRaca nullable: false
+        etnia nullable: true
+
+        orientacaoSexual nullable: false
+        genero nullable: false
+
+        enderecoPessoa nullable: false
     }
 
     String nome
     String nomeSocial
-    String rg
-    String cpf
     Date dataNascimento
     boolean dataNaoConfirmada
     Date dataCadastro
@@ -36,5 +40,9 @@ class Pessoa {
     String email1
     String email2
 
-    String enderecoPessoa
+    CorRaca corRaca
+    Etnia etnia
+    OrientacaoSexual orientacaoSexual
+    Genero genero
+    EnderecoPessoa enderecoPessoa
 }

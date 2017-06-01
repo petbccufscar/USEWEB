@@ -1,11 +1,9 @@
 package useweb.cadastroPessoa
 
-class Endereco_Pessoa {
+class EnderecoPessoa {
 
-    static mapping = {
-    }
-
-    static hasMany = [pessoa: Pessoa]
+    static hasMany = [pessoas:Pessoa]
+    static belongsTo = [endereco: Endereco]
 
     static constraints = {
         numero nullable: true

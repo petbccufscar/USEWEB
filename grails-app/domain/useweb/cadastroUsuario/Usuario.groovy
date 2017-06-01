@@ -4,29 +4,39 @@ import useweb.cadastroPessoa.Pessoa
 
 class Usuario extends Pessoa {
 
-    static mapping = {
-
-    }
-
-    //TODO: Usuario também tem um "cuidador", verificar como fazer essa associação
-//    static hasMany = []
-
+    static hasMany = [acompanhantes: AcompanhanteUsuario]
 
     static constraints = {
-        statusInatividade(nullable: true)
-        dataInatividade(nullable: true)
-        motivoInatividade(nullable: true)
+        cns blank: false
+        nomeResponsavel blank: false
+        profissao nullable: true
+        statusProfissao nullable: true, inList: ["Empregador",
+                                                 "Assalariado com carteira de trabalho",
+                                                 "Assalariado sem carteira de trabalho",
+                                                 "Autônomo com previdência social",
+                                                 "Autônomo sem previdência social",
+                                                 "Aposentado/Pensionista",
+                                                 "Desempregado",
+                                                 "Não trabalha",
+                                                 "Servidor público/militar",
+                                                 "Outro"]
+
+        inativo nullable: false
+        dataInatividade nullable: true
+        motivoInatividade nullable: true
+        observacao nullable: true
+
+        escolaridade nullable: false
     }
 
-    Integer cns
-    String nomeMae
+    String cns
+    String nomeResponsavel
     String profissao
     String statusProfissao
-    String statusInatividade
+    boolean inativo
     Date dataInatividade
     String motivoInatividade
     String observacao
-//    Escolaridade escolaridade
-//    Etnia etnia
-//    CorRaca corRaca
+
+    Escolaridade escolaridade
 }

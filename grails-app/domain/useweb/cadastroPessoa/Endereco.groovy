@@ -2,11 +2,9 @@ package useweb.cadastroPessoa
 
 class Endereco {
 
-    static mapping = {
-    }
-
     static belongsTo = [cidade: Cidade]
-    static hasMany = []
+
+    static hasMany = [enderecoPessoa:EnderecoPessoa]
 
     static constraints = {
         cep blank: false, size: 1..8
